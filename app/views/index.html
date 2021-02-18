@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Travis Nodejs App</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1>Travis Nodejs App</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <%- include('_search_form.html') %>
+
+      <% if (invalidParameters) { %>
+        <div class="alert alert-danger">
+          <strong>Invalid value for "tags" or "tagmode" input parameters</strong><br><br>
+          Tags should be formatted as a comma delimited list containing only letters, commas, and spaces.
+          Tag Mode must equal "all" or "any".
+        </div>
+        <% } %>
+
+          <% if (searchResults) { %>
+            <%- include('_search_results.html') %>
+              <% } %>
+  </div>
+</body>
+</html>
