@@ -10,4 +10,4 @@ cache:
 before_install:
   - npm install
 
-script: npm run test
+# script: npm run test
