@@ -10,4 +10,10 @@ cache:
 before_install:
   - npm install
 
-# script: npm run test
+jobs:
+  include:
+    - stage: test
+      name: test
+      script:
+        - npm run build
+        - npm run test
