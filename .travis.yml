@@ -15,5 +15,4 @@ jobs:
     - stage: test
       name: test
       script:
-        - npm run build
         - npm run test
