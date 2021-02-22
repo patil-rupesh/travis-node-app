@@ -8,7 +8,12 @@ cache:
   npm: true
 
 before_install:
+  - sudo apt-get -y install libxml2-dev
   - npm install
+
+addons:
+  apt:
+    update: true
 
 jobs:
   include:
